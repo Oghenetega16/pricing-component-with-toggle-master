@@ -21,13 +21,17 @@ export default function PricingPage() {
                     />
                     <p>Monthly</p>
                 </div>
-                <div className="flex justify-center flex-col md:flex-row">
+                <div className="flex justify-center flex-col md:flex-row md:items-center">
                     <PricingCard 
                         plan = 'Basic'
                         price = {toggle ? '19.99' : '199.99'}
                         storage = '500 GB Storage'
                         users = '2 Users Allowed'
                         send = 'Send up to 3 GB'
+                        buttonBgColor = 'bg-gradient-to-br from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)]'
+                        buttonTextColor = "text-white"
+                        height="size-fit"
+                        paddingTopBottom="py-10"
                     />
                     <PricingCard 
                         plan="Professional"
@@ -38,7 +42,9 @@ export default function PricingPage() {
                         cardBgColor="bg-gradient-to-tr from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)]"
                         cardTextColor="text-white"
                         buttonBgColor="bg-white"
-                        buttonTextColor=""
+                        buttonTextColor="bg-gradient-to-bl from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)] bg-clip-text text-transparent"
+                        height="md:h-135"
+                        paddingTopBottom="py-16.5"
                     />
                     <PricingCard 
                         plan="Master" 
@@ -46,6 +52,10 @@ export default function PricingPage() {
                         storage="2TB Storage" 
                         users="10 Users Allowed" 
                         send="Send up to 20 GB"
+                        buttonBgColor = 'bg-gradient-to-br from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)]'
+                        buttonTextColor = "text-white"
+                        height="size-fit"
+                        paddingTopBottom="py-10"
                     />
                 </div>
             </div>
