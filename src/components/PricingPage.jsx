@@ -21,7 +21,7 @@ export default function PricingPage() {
                     />
                     <p>Monthly</p>
                 </div>
-                <div className="flex justify-center flex-col md:flex-row md:items-center">
+                <div className="flex justify-center flex-col sm:inline-flex md:inline-grid md:gap-8 md:grid-cols-2 lg:inline-flex lg:flex-row lg:gap-0">
                     <PricingCard 
                         plan = 'Basic'
                         price = {toggle ? '19.99' : '199.99'}
@@ -30,7 +30,7 @@ export default function PricingPage() {
                         send = 'Send up to 3 GB'
                         buttonBgColor = 'bg-gradient-to-br from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)]'
                         buttonTextColor = "text-white"
-                        height="size-fit"
+                        height="h-auto"
                         paddingTopBottom="py-10"
                     />
                     <PricingCard 
@@ -43,7 +43,7 @@ export default function PricingPage() {
                         cardTextColor="text-white"
                         buttonBgColor="bg-white"
                         buttonTextColor="bg-gradient-to-bl from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)] bg-clip-text text-transparent"
-                        height="md:h-135"
+                        height="h-135"
                         paddingTopBottom="py-16.5"
                     />
                     <PricingCard 
@@ -54,7 +54,7 @@ export default function PricingPage() {
                         send="Send up to 20 GB"
                         buttonBgColor = 'bg-gradient-to-br from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)]'
                         buttonTextColor = "text-white"
-                        height="size-fit"
+                        height=""
                         paddingTopBottom="py-10"
                     />
                 </div>

@@ -20,7 +20,7 @@ export default function PricingCard({
     const isProfessional = plan === "Professional"
 
     return (
-        <div className={`${cardBgColor} text-center ${cardTextColor} font-bold rounded-xl px-7 ${paddingTopBottom} mb-8 w-sm ${height}`}>
+        <div className={`${cardBgColor} text-center ${cardTextColor} font-bold rounded-xl px-7 py-10 mb-8 w-full h-full sm:w-xs md:h-auto lg:${height}`}>
             <p className="text-xl mb-8">{plan}</p>
             <div className="flex items-center justify-center text-7xl pb-8 border-b border-gray-200">
                 <span className="text-4xl">$</span>
