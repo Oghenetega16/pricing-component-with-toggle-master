@@ -31,15 +31,15 @@ export default function PricingCard({
                 <li className="py-4 border-b border-gray-200">{users}</li>
                 <li className="py-4 border-b border-gray-200">{send}</li>
             </ul>
-            <button
-                className={`uppercase ${buttonBgColor} text-xs flex justify-center w-full mt-8 py-3 rounded-lg cursor-pointer tracking-widest transition duration-300 ease-in-out ${isActive ? `bg-transparent ${isProfessional ? "border-2 border-white" : gradientBorder}` : buttonBgColor}`}
+            <button 
+                className={`uppercase text-xs flex justify-center w-full mt-8 py-3 rounded-lg cursor-pointer tracking-widest transition duration-300 ease-in-out
+                ${isActive ? (isProfessional ? "bg-transparent border-2 border-white text-white" : `bg-transparent ${gradientBorder}`) : buttonBgColor}`}
                 onClick={() => setIsActive(!isActive)}
-                style={isActive ? (isProfessional ? {} :
-                    {backgroundImage: 'linear-gradient(white, white), linear-gradient(to right, hsl(236,72%,79%), hsl(237,63%,64%))',
+                style={isActive && !isProfessional ? {
+                    backgroundImage: 'linear-gradient(white, white), linear-gradient(to right, hsl(236,72%,79%), hsl(237,63%,64%))',
                     backgroundOrigin: 'border-box',
-                    backgroundClip: 'padding-box, border-box'}) : {}}
-                >
-                <span className={isActive ? (plan === "Professional" ? "text-white" : gradientText) : buttonTextColor}>Learn More</span>
+                    backgroundClip: 'padding-box, border-box'} : {}}>
+                <span className={`${isActive ? (isProfessional ? "text-white" : gradientText) : buttonTextColor}`}>Learn More</span>
             </button>
         </div>
     )
